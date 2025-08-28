@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World Website</title>
+  </head>
+  <body>
+    <h1 id="title">Hello, World!</h1>
+    <button onclick="changeName()">Change name</button>
+  </body>
+  <script>
+    function changeName() {
+      let newName = prompt("Type your name or whatever you want here.");
+      if (newName == null || newName == "") {
+        alert("dude please just type something");
+      } else {
+        document.getElementById("title").textContent =
+          "Hello, " + newName + "!";
+        // idk if you want the title to also change or not
+        document.title = "Hello, " + newName + "!";
+      }
+    }
+  </script>
+</html>
